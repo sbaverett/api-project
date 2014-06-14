@@ -8,6 +8,7 @@ $(function() {
   var extras;
   var per_page = '10';
   var page = '3';
+  var title;
  
 
   var getPhotos = function() {
@@ -20,7 +21,8 @@ $(function() {
         format: format,
         extras: extras,
         per_page: per_page,
-        page: page 
+        page: page,
+        title: title 
       }
 
     })
@@ -29,9 +31,10 @@ $(function() {
         var photoSource = "https:farm" + photo.farm + ".staticflickr.com/" + 
         photo.server + "/" + photo.id + "_" + photo.secret + "_n.jpg";
         console.log(photoSource);
-        // var image = $('<img>').attr("src", photoSrc);
         var image = $('<img>').attr('src', photoSource);
-        $('#photo').append(image);
+        $('div.photo').append(image);
+        // $('#dog').append(dogImage);
+        // $('#cat').append(catImage);     
 
       });
 
