@@ -1,0 +1,32 @@
+Notes
+
+** This is to show how to separate subsets of photos
+** that share the same styling
+
+This would go in html:
+<!-- 	<div class="photo" id="cat"></div>
+	<div class="photo" id="dog"></div>
+ -->
+
+ This would go in css:
+ /* This is to show how to style a title
+.photo h3 {
+	font-size: 2em;
+	font-family: calabri;
+	color: #005500;
+	margin: 0 center;
+}
+
+#dog {
+	color: #550000;
+}
+
+#cat {
+	color: #ffff00;
+}*/
+
+
+
+
+
+

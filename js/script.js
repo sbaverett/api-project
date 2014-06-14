@@ -7,7 +7,7 @@ $(function() {
   var format = 'json';
   var extras;
   var per_page = '10';
-  var page = '3';
+  var page = '6';
   var title;
  
 
@@ -29,22 +29,24 @@ $(function() {
     .then(function(data, status, xhr) {
       $.each(data.photos.photo, function(i, photo) {
         var photoSource = "https:farm" + photo.farm + ".staticflickr.com/" + 
-        photo.server + "/" + photo.id + "_" + photo.secret + "_n.jpg";
-        console.log(photoSource);
+        photo.server + "/" + photo.id + "_" + photo.secret + "_z.jpg";
         var image = $('<img>').attr('src', photoSource);
-        $('div.photo').append(image);
-        // $('#dog').append(dogImage);
-        // $('#cat').append(catImage);     
+        $('div').append(image);
 
-      });
+        });   
 
     }, function(xhr, status, error) {
 
     });
+
   };
 
-getPhotos();
+  getPhotos();
 
+  $('div').click(function() {
+    console.log('awesome');
+    $(this).closest('div').toggleClass('clicked');
+  });
 
 });
 

@@ -1,38 +1,16 @@
-body{
-
-}
-
-.photo {
-	height: 250px;
-	width: 250px;
-
-}
 
 .photo img {
 	display: block;
-	margin: bottom center; /*(this may be backwards)*/
-/*	height: 150px;
+	margin: bottom center;
+	padding-top: 1em;
 	width: 150px;
-*/
+
 }
 
-/*.photo h3 {
-	font-size: 2em;
-	font-family: calabri;
-	color: #005500;
-	margin: 0 center;
+.clicked img {
+	display: block;
+	margin: bottom center;
+	padding-top: 1em;
+	width: auto;
 }
-
-#dog {
-	color: #550000;
-}
-
-#cat {
-	color: #ffff00;
-}*/
-
-
-
-
-
 
