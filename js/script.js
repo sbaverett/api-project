@@ -6,7 +6,7 @@ $(function() {
   var api_key = '3268976e6aadb68d8518ca97d4cd18da';
   var format = 'json';
   var extras;
-  var per_page = '10';
+  var per_page = '4';
   var page = '6';
   var title;
  
@@ -30,9 +30,12 @@ $(function() {
       $.each(data.photos.photo, function(i, photo) {
         var photoSource = "https:farm" + photo.farm + ".staticflickr.com/" + 
         photo.server + "/" + photo.id + "_" + photo.secret + "_z.jpg";
-        var image = $('<img>').attr('src', photoSource);
-        $('div').append(image);
-
+        var imageContainer = '<div class=photo><img src=' + photoSource + '></div>';
+        console.log(imageContainer);
+        // var image = $('<img>').attr('src', photoSource);
+        // $('div').append(imageContainer);
+        
+        // $(image).appendTo('div.image');
         });   
 
     }, function(xhr, status, error) {
@@ -43,9 +46,13 @@ $(function() {
 
   getPhotos();
 
-  $('div').click(function() {
-    console.log('awesome');
-    $(this).closest('div').toggleClass('clicked');
+  $('div.photo').click(function() {
+    console.log(event.target);
+    console.log(this);
+    $(this).toggleClass('clicked');
+    // if(any div.photo === div.photo.clicked)
+    //   reset to div.photo and then $(this).toggleClass('clicked');
+    // else()
   });
 
 });
