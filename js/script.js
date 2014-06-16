@@ -33,7 +33,7 @@ $(function() {
         var imageContainer = '<div class=photo><img src=' + photoSource + '></div>';
         console.log(imageContainer);
         // var image = $('<img>').attr('src', photoSource);
-        // $('div').append(imageContainer);
+        $(imageContainer).insertAfter(".enlarge");
         
         // $(image).appendTo('div.image');
         });   
@@ -46,10 +46,10 @@ $(function() {
 
   getPhotos();
 
-  $('div.photo').click(function() {
+  $(event.target).click(function() {
     console.log(event.target);
     console.log(this);
-    $(this).toggleClass('clicked');
+    $(event.target).toggleClass('clicked');
     // if(any div.photo === div.photo.clicked)
     //   reset to div.photo and then $(this).toggleClass('clicked');
     // else()

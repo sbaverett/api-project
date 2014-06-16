@@ -9,6 +9,9 @@
 
 .clicked img {
 	width: auto;
+	margin-left: 170px
 }
 
-
+.enlarge {
+	color: #00ff00;
+}
